@@ -1,0 +1,1119 @@
+
+<!--Estilos del mensaje de alerta del signo de interrogacion -->       
+<style type="text/css">
+					.tooltip {
+				    	display: inline;
+					    position: relative;
+					    opacity: .95;
+						-moz-opacity: .95;
+					   filter:alpha(opacity=95);
+					}
+  				.tooltip:hover:after {
+					/*top: 20px; cuadrado debajo*/
+				    bottom:16px;/* cuadrado Encima*/    
+				    content: attr(original-title); /* este es el texto que será mostrado */
+				    left: 20%;
+				    position: absolute;
+				    z-index: 500;
+				    /* el formato gráfico */
+				   /*background: rgba(255,255,255, 0.2) ;*/
+				    /*JOMP ORIGINALbackground: orange ;*/
+					background: #ffec4f ;
+				    border: 1px solid #000;
+					border-radius: 10px;
+					
+				    color: #000; /* el color del texto */
+				    font-family: Arial;
+				    font-size: 11px;
+					font-weight:normal;
+				    /*padding: 1px 2px; ORIGINAL*/
+					padding-left:1px;
+					padding-right:1px;
+				    text-align: center;
+				  /*JOMP  text-shadow: 1px 1px 1px #000;*/
+				    width: 130px;
+  				}
+
+
+
+/**********************************************************************************************************/
+/*configuracion principal de la pagina*/
+
+
+/*esta clase establece un elemento con el identificador "page" 
+para ocupar todo el ancho y alto de su contenedor padre, sin márgenes ni rellenos, y con un fondo blanco.*/
+
+#page {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    background-color: #fff;
+}
+
+/*identificador para aplicar una transición de vista 
+específica en un cambio de página o en algún otro evento de cambio de vista en la aplicación web.*/
+:root {
+    view-transition-name: root;
+}
+
+/*el identificador "completo" para que ocupe todo el ancho disponible, 
+se centre horizontalmente dentro de su contenedor padre,
+ y tenga una sombra suave alrededor de él para agregar un efecto visual.*/
+
+#completo {
+    position: relative;
+    width: 100%;
+    margin: 0 auto;
+    -moz-box-shadow: 0 0 30px 5px #888;
+    -webkit-box-shadow: 0 0 30px 5px#888;
+    box-shadow: 0 0 30px 5px #888;
+}
+
+/*esta clase define estilos para un encabezado fijo en la parte superior de la página,
+ con texto blanco, fondo blanco y utilizando la fuente Open Sans en negrita.*/
+.head {
+    font-family: 'Open Sans';
+    font-size: 12px;
+    margin: auto;
+    color: #FFF;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 100 !important;
+    background-color: #fff;
+    font-weight: 600 !important;
+}
+
+/*se utiliza  para proporcionar texto de ayuda
+ o información adicional a usuarios de tecnologías de asistencia*/
+
+.assistive, legend.assistive span {
+    border: 0;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+}
+
+/*estas reglas definen el estilo de presentación de una lista desordenada, 
+incluyendo la apariencia de los marcadores, los márgenes y los rellenos de la lista.*/
+ul {
+    display: block;
+    list-style-type: disc;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    padding-inline-start: 40px;
+    unicode-bidi: isolate;
+}
+
+/*estas reglas CSS están diseñadas para estilizar la lista de migas de pan (#breadcrumbs) y los enlaces dentro del encabezado (#header) 
+de una manera específica, utilizando imágenes de fondo y colores de texto específicos.*/
+#breadcrumbs li.first {
+    padding-left: 0;
+    background-image: none;
+}
+#breadcrumbs li {
+    white-space: nowrap;
+    display: inline-block;
+    margin: 0 .2em 0 0;
+    padding-left: 15px;
+    background: url(/s/es_ES/3287/421/1.0/_/download/resources/confluence.web.resources:content-styles/../../../images/decoration/white_breadcrumbs_indicator.png);
+    background-repeat: no-repeat;
+    background-position: 3px center;
+}
+#header a, #breadcrumbs {
+    color: #ffffff;
+}
+#breadcrumbs {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+#breadcrumbs li span {
+    display: block;
+}
+
+/*afecta a elementos <ol> (listas ordenadas)
+ y establece el tipo de marcador utilizado para los elementos de la lista.*/
+
+ol {
+    list-style-type: decimal;
+}
+
+/*se encarga de establecer diversos aspectos del formato y la apariencia de los marcadores de lista para asegurar una presentación coherente
+ y bien formateada en el documento.*/
+::marker {
+    unicode-bidi: isolate;
+    font-variant-numeric: tabular-nums;
+    text-transform: none;
+    text-indent: 0px !important;
+    text-align: start !important;
+    text-align-last: start !important;
+}
+/* estas reglas CSS se utilizan para definir el aspecto de los enlaces
+ y garantizar una experiencia de usuario consistente y accesible.*/
+
+a:link, a:visited {
+    text-decoration: none;
+    outline: none;
+}
+a:link, a:visited, a:focus, a:hover, a:active, a.blogHeading {
+    color: #326ca6;
+}
+
+a:-webkit-any-link {
+    color: -webkit-link;
+    cursor: pointer;
+    text-decoration: underline;
+}
+
+/*efine estilos para un elemento con el identificador #cuerpo_central,
+ estableciendo su ancho, rellenos, color de fondo, tipo de visualización, 
+ espacio de relleno en la parte superior y centrado horizontal dentro de su contenedor padre.*/
+#cuerpo_central {
+    width: 80%;
+    padding-left: 10%;
+    padding-right: 10%;
+    background-color: #FFF;
+    display: table;
+    padding-top: 150px;
+    margin: auto;
+}
+
+/* establecen estilos para el elemento #main, incluyendo altura mínima,
+ márgenes, esquinas redondeadas, borde, alineación de texto, color de fondo y relleno*/
+.theme-default #main {
+    min-height: 85%;
+    margin: .75em;
+    -moz-border-radius: .3125em;
+    -webkit-border-radius: .3125em;
+    border-radius: .3125em;
+    border: 1px solid #BBB;
+}
+
+#main {
+    text-align: left;
+    background-color: #fff;
+    padding: 1.25em;
+}
+
+/*fin configuracion pantalla principal*/
+/******************************************************************************************************/
+/******************************************************************************************************/
+/*main header franja naranja con nombre de usuario */
+
+/*define estilos para un encabezado fijo (#header) que incluye color de fondo, posición fija en la parte superior de la ventana del navegador, ancho completo,
+ márgen superior, índice de apilamiento, relleno y una sombra sutil debajo del encabezado.*/
+#header {
+    background-color: #f78d6f !important;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    margin-top: 127px;
+    z-index: 99;
+    padding-left: 9rem;
+    -webkit-box-shadow: 0 1px 0 rgba(0,0,0,.1);
+    -moz-box-shadow: 0 1px 0 rgba(0, 0, 0, .1);
+    box-shadow: 0 1px 0 rgba(0,0,0,.1);
+}
+
+/*define estilos para una barra lateral derecha con un ancho fijo, un color de fondo específico, 
+texto en negrita y un relleno en el lado derecho para proporcionar espacio entre el contenido 
+y el borde derecho de la barra lateral.*/
+.barra_derecha {
+    background-color: #109aa5;
+    width: 250px;
+    float: right;
+    color: #464646;
+    padding-right: 10rem;
+    font-weight: bold;
+}
+
+/* asegura que los elementos <div> se muestren como bloques y
+ que el texto dentro de ellos no se vea afectado por el texto bidireccional.*/
+div {
+    display: block;
+    unicode-bidi: isolate;
+}
+
+/*estas reglas CSS establecen estilos básicos para el cuerpo de la página 
+y el texto dentro de ella, asegurando consistencia en la apariencia y la legibilidad del contenido.*/
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    width: 100%;
+    font-family: "Open Sans", Arial, sans-serif;
+}
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    text-decoration: none;
+    background-color: #ffffff;
+    margin-top: 0;
+    margin-bottom: 0;
+    margin-left: 0;
+    margin-right: 0;
+    font-size: 11px;
+}
+
+p {
+    display: block;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    unicode-bidi: isolate;
+}
+
+
+body, p, td, table, tr, .bodytext, .stepfield {
+    font-size: 10pt;
+    line-height: 1.3;
+    color: #000;
+    font-weight: normal;
+}
+
+/*stán diseñadas para dar formato y estilo al contenido de una página web que utiliza un sistema de wiki,
+ asegurando una apariencia consistente y legible.*/
+
+.wiki-content>*:first-child, .wiki-content td.confluenceTd>*:first-child, .wiki-content th.confluenceTh>*:first-child, .wiki-content li>*:first-child {
+    margin-top: 0;
+}
+
+.has-blog-sidebar wiki-content p, .blogpost .wiki-content p, .wiki-content p {
+    font-family: lucida sans unicode, sans-serif;
+    font-size: 17px;
+    line-height: 150%;
+}
+
+.wiki-content p, .wiki-content pre, .wiki-content ul, .wiki-content ol, .wiki-content dl, table.confluenceTable {
+    margin-bottom: 10px;
+}
+.wiki-content p, .wiki-content table {
+    padding: 0;
+}
+
+/*fin main header franja naranja con nombre de usuario*/
+/**********************************************************************************************************************/
+
+/***********************************************************************************/
+/* barra de busqueda */
+
+/*e utiliza para dar estilo a un campo de entrada específico dentro de un formulario de búsqueda,
+ con esquinas redondeadas, relleno en el lado izquierdo y un borde sólido de color azul.*/
+#div_busqueda_nombre > input.nombre {
+    border-radius: 5px;
+    padding-left: 5px;
+    border: 1px #109aa5 solid;
+}
+
+/*establecen varios estilos para los elementos <input> y <textarea>, incluyendo fuente,
+ tamaño de fuente, color de texto, relleno, bordes y otros estilos relacionados con la apariencia y 
+ el comportamiento del elemento en una página web.*/
+input, textarea, textarea.editor {
+    font-family: Arial, Helvetica, FreeSans, sans-serif;
+    font-size: 10pt;
+    color: #000;
+}
+
+input[type="text" i] {
+    padding-block: 1px;
+    padding-inline: 2px;
+}
+
+input {
+
+    text-rendering: auto;
+    color: fieldtext;
+    letter-spacing: normal;
+    word-spacing: normal;
+    line-height: normal;
+    text-transform: none;
+    text-indent: 0px;
+    text-shadow: none;
+    display: inline-block;
+    text-align: start;
+    appearance: auto;
+    -webkit-rtl-ordering: logical;
+    cursor: text;
+    background-color: field;
+    margin: 0em;
+    padding: 1px 0px;
+    border-width: 2px;
+    border-style: inset;
+    border-color: light-dark(rgb(118, 118, 118), rgb(133, 133, 133));
+    border-image: initial;
+    padding-block: 1px;
+    padding-inline: 2px;
+}
+input[type="button" i] {
+    appearance: none;
+    user-select: none;
+    align-items: flex-start;
+    text-align: center;
+    cursor: pointer;
+    box-sizing: border-box;
+    background-color: #2e9eda;
+    color: white;
+    border: none;
+    padding: 6px;
+}
+
+/*En resumen, esta regla CSS define un estilo para un botón con la clase .btn_verde, que incluye un color de fondo verde azulado, bordes, esquinas redondeadas, relleno, color de texto blanco,
+ alineación de texto centrada y una transición suave para cambios de estilo.*/
+.btn_verde {
+    background-color: #109aa5;
+    border: 1px #109aa5 solid;
+    border-radius: 6px;
+    padding: 2px 10px;
+    color: #fff;
+    text-align: center;
+    transition-duration: 0.2s;
+}
+
+/*fin barra de busqueda*/
+/**********************************************************************************************************************************************************************************************/
+
+/*barra de navegacion derecha compartir - herramientas */
+
+/*establecen el diseño y estilo del elemento de navegación de la página,
+ incluyendo su posición, bordes y márgenes internos.*/
+.theme-default #navigation {
+    float: right;
+}
+
+#navigation {
+    display: inline;
+}
+
+#navigation, #tab-navigation {
+    border-bottom-color: #45789e;
+}
+
+#navigation .ajs-menu-bar {
+    margin: 10px 0 0 1em;
+}
+
+/*definen estilos detallados para los elementos de menú dentro de la barra de navegación, 
+incluyendo su diseño, apariencia y comportamiento.*/
+
+.ajs-menu-bar, .ajs-menu-bar .ajs-button, .ajs-menu-bar .ajs-button a, .ajs-menu-bar .ajs-button span, .ajs-menu-bar .ajs-menu-item .ajs-menu-title, .ajs-menu-bar .ajs-menu-item .ajs-menu-title span, .ajs-menu-bar .ajs-menu-item .ajs-menu-title span span, .ajs-menu-bar .ajs-drop-down a, .ajs-menu-bar .ajs-drop-down a span, .ajs-menu-bar .ajs-drop-down a span span {
+    display: block;
+    margin: 0;
+    padding: 0;
+}
+
+#navigation .ajs-menu-bar li.ajs-menu-item .ajs-menu-title, #navigation .ajs-menu-bar li.ajs-button a {
+    -moz-border-radius: 3px;
+    -webkit-border-radius: 3px;
+    border-radius: 3px;
+    color: #535353;
+    font-size: 1.1em;
+    line-height: 20px;
+    padding: .35em .5em;
+}
+
+.ajs-menu-bar {
+    float: right;
+    line-height: 1.5;
+    position: relative;
+}
+
+.ajs-menu-bar .ajs-button {
+    float: left;
+    line-height: 2;
+    list-style: none;
+    position: static;
+}
+.ajs-menu-bar .ajs-menu-item.opened, .ajs-menu-bar .ajs-button a {
+    -moz-border-radius: 3px;
+    -webkit-border-radius: 3px;
+    border-radius: 3px;
+}
+.ajs-menu-bar .ajs-menu-item a, .ajs-menu-bar .ajs-button a {
+    line-height: 1.5;
+    text-decoration: none;
+    white-space: nowrap;
+}
+.ajs-menu-bar .ajs-menu-item .most-right-menu-item {
+    left: auto;
+    margin: 0;
+    right: 0;
+}
+.ajs-menu-bar .ajs-drop-down {
+    border-color: #066293;
+    border-radius: 5px;
+}
+
+.ajs-menu-bar .ajs-drop-down {
+    -moz-border-radius-bottomright: 3px;
+    -moz-border-radius-bottomleft: 3px;
+    -webkit-border-bottom-right-radius: 3px;
+    -webkit-border-bottom-left-radius: 3px;
+    border-bottom-right-radius: 3px;
+    border-bottom-left-radius: 3px;
+    background: #fff;
+    border: solid 1px #c1c1c1;
+    font-weight: normal;
+    min-width: 12em;
+    padding: 0;
+    position: absolute;
+    left: 0;
+    white-space: nowrap;
+    z-index: 1000;
+}
+.ajs-menu-bar .ajs-drop-down a.action-page-watching {
+    background-image: url(/sitio_portal/images/cartaabierta.png);
+}
+.ajs-menu-bar .ajs-menu-item .trigger span {
+    background-position: 100% 50%;
+    background-repeat: no-repeat;
+}
+.ajs-menu-bar .ajs-menu-item .trigger span {
+    background-image: url(/s/es_ES/3287/421/1.0/_/download/resources/confluence.web.resources:master-styles/../../../images/decoration/menu_indicator.gif);
+    position: relative;
+}
+
+.ajs-menu-bar .ajs-drop-down a.action-page-watching {
+    background-image: url(/s/es_ES/3287/421/1.0/_/download/resources/confluence.web.resources:master-styles/../../../images/icons/actions/watch_grey_16.png);
+}
+
+.ajs-menu-bar .ajs-menu-item .section-secondary li a, .ajs-menu-bar .ajs-menu-item .section-modify li a {
+    padding-left: 8px;
+    font-size: .9em;
+}
+
+/*se utilizan para crear elementos que están presentes en la estructura HTML para mejorar la accesibilidad de la página web, 
+pero que no son visibles para el usuario. Esto puede ser útil para proporcionar información adicional a los
+ lectores de pantalla u otros dispositivos de asistencia, sin interferir con la experiencia de usuario típica.*/
+
+.assistive, legend.assistive span {
+    border: 0;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+}
+/*establecen el diseño y el espaciado de las listas desordenadas en una página web,
+ incluyendo el tipo de marcador, los márgenes y el relleno.*/
+ul {
+    display: block;
+    list-style-type: disc;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    padding-inline-start: 40px;
+    unicode-bidi: isolate;
+}
+li {
+    display: list-item;
+    text-align: -webkit-match-parent;
+    unicode-bidi: isolate;
+}
+
+/*están diseñadas para normalizar el aspecto y comportamiento de los elementos relacionados
+ con los títulos de menú dentro de una barra de menú, 
+ asegurando que no haya margen ni relleno innecesarios, y que los elementos se muestren como bloques.*/
+menu-title, .ajs-menu-bar .ajs-menu-item .ajs-menu-title span, .ajs-menu-bar .ajs-menu-item .ajs-menu-title span span, .ajs-menu-bar .ajs-drop-down a, .ajs-menu-bar .ajs-drop-down a span, .ajs-menu-bar .ajs-drop-down a span span {
+    display: block;
+    margin: 0;
+    padding: 0;
+}
+
+/*aseguran que los enlaces en la página se vean uniformes y proporcionan una indicación visual de que son clicables. Además, eliminan el contorno predeterminado 
+alrededor de los enlaces cuando están enfocados para mejorar la estética y la accesibilidad.*/
+
+a:link, a:visited {
+    text-decoration: none;
+    outline: none;
+}
+
+a:-webkit-any-link {
+    color: -webkit-link;
+    cursor: pointer;
+    text-decoration: underline;
+}
+
+/* fin barra de navegacion*/
+/*****************************************************************************************************************************************************************/
+/*****************************************************************************************************************************************************************/
+/* caja proyecto todos los sectores medida 82% ---esta se encuentra al lado derecho de de la barra de navegacion izquierda que esta contenida en la 
+clase div.panel_izquierdo medidas 17 % */
+
+/*Estas reglas se aplican directamente al elemento,
+ lo que significa que no afectarán a ningún otro elemento en la página. */
+element.style {
+    color: #24587F;
+    font-size: 18px;
+    font-weight: bold;
+    float: left;
+    line-height: 20px;
+    clear: both;
+    width: 60%;
+    font-weight: bold;
+}
+/* elimina el borde inferior de los elementos que tienen la clase content-editable-container.*/
+content-editable-container {
+    border-bottom: 0;
+}
+
+/*establecen el estilo y el comportamiento del contenido editable y los elementos dentro de la clase wiki-content. Esto puede incluir ajustes de tamaño de fuente, altura de línea y 
+limpieza de flotantes para garantizar una presentación coherente y adecuada del contenido.*/
+#content-editable-container {
+    border-bottom: 0;
+}
+
+tr {
+    display: table-row;
+    vertical-align: inherit;
+    unicode-bidi: isolate;
+    border-color: inherit;
+}
+.wiki-content, .wiki-content p, .wiki-content table, .wiki-content tr, .wiki-content td, .wiki-content th, .wiki-content ol, .wiki-content ul, .wiki-content li {
+    font-size: 10pt;
+    line-height: 13pt;
+}
+.wiki-content:after {
+    clear: both;
+    content: ".";
+    display: block;
+    font-size: 0;
+    height: 0;
+    visibility: hidden;
+}
+
+.columna_listado_pro {
+    width: 80%;
+    float: left;
+    padding-right: 1%;
+}
+
+.column_1 td.titulo {
+    font-size: 12px;
+    color: #d48773;
+    font-weight: bold;
+    border: 1px solid #a6c6c1;
+    background-color: #fff;
+    height: 100%;
+    width: 154px;
+    display: table-cell;
+    padding: 10px;
+    font-size: 13px;
+    text-align: center;
+    vertical-align: middle;
+    background-color: #ecf4f7;
+    color: #4b7b85;
+}
+
+.column_1 .titulo {
+    font-size: 0.75rem;
+    color: #f67e62;
+    font-weight: bold;
+    border: 1px solid #066293;
+    background-color: #fff;
+    display: table;
+    height: 100%;
+    width: 154px;
+    border-radius: 5px;
+    padding: 2px 0 2px 3px;
+    font-weight: bold;
+}
+table.confluenceTable {
+    margin-bottom: 10px;
+   
+    
+}
+
+.wiki-content table {
+    
+        font-size: 10pt;
+        line-height: 13pt;
+        padding: 0;
+    
+}
+
+sb-container {
+    position: fixed;
+    margin: 0;
+    padding: 0;
+    top: 0;
+    left: 0;
+    z-index: 99999999999999;
+    text-align: left;
+    visibility: hidden;
+    display: none;
+}
+
+/*fin caja todos los proyectos*/
+/***********************************************************************************************************/
+
+/***********************************************************************************************************/
+/*caja proyecto de todos los sectores*/
+
+/*margen con el menu izquierdo*/
+div.panel.izquierdo{
+        float: left;
+        width: 25%;
+        display: block;
+        margin-left: 0%;
+    
+}
+
+div.column_1{
+    width: 25% !important;
+    margin-left: 0% !important;
+}
+
+/*fin margen*/
+
+element.style {
+    color: #24587F;
+    font-size: 18px;
+    font-weight: bold;
+    float: left;
+    line-height: 20px;
+    clear: both;
+    width: 60%;
+}
+
+a:link, a:visited {
+    text-decoration: none;
+    outline: none;
+}
+a:link, a:visited, a:focus, a:hover, a:active, a.blogHeading {
+    color: #326ca6;
+}
+
+
+a:-webkit-any-link {
+    color: -webkit-link;
+    cursor: pointer;
+    text-decoration: none;
+}
+.wiki-content table.confluenceTable {
+    border-collapse: collapse;
+}
+.wiki-content p, .wiki-content pre, .wiki-content ul, .wiki-content ol, .wiki-content dl, table.confluenceTable {
+    margin-bottom: 10px;
+}
+
+.wiki-content p, .wiki-content table {
+    padding: 0;
+}
+.wiki-content, .wiki-content p, .wiki-content table, .wiki-content tr, .wiki-content td, .wiki-content th, .wiki-content ol, .wiki-content ul, .wiki-content li {
+    font-size: 10pt;
+    line-height: 13pt;
+}
+.column_1 {
+    position: relative;
+    float: left;
+    width: 100%;
+    margin: 0;
+}
+
+
+
+table {
+    border: 0;
+    margin: 0;
+    padding: 0;
+    color: #000;
+    font-weight: normal;
+    clear: left;
+    margin-left: 15px;
+}
+table.confluenceTable td.confluenceTd {
+    border-width: 1px;
+    border-style: solid;
+    border-color: #ddd;
+    padding: 5px 7px;
+    vertical-align: top;
+    min-width: .6em;
+    text-align: left;
+}
+
+#content-editable-container {
+    border-bottom: 0;
+}
+.columna_listado_pro {
+    width: 80%;
+    float: left;
+    padding-right: 1%;
+}
+.wiki-content table.confluenceTable {
+    border-collapse: collapse;
+}
+
+.VIpgJd-yAWNEb-L7lbkb {
+    color: #222;
+    background-color: #fff;
+    border: 1px solid #eee;
+    box-shadow: 0 4px 16px rgba(0,0,0,.2);
+    -moz-box-shadow: 0 4px 16px rgba(0, 0, 0, .2);
+    -webkit-box-shadow: 0 4px 16px rgba(0,0,0,.2);
+    display: none;
+    font-family: arial;
+    font-size: 10pt;
+    width: 420px;
+    padding: 12px;
+    position: absolute;
+    z-index: 10000;
+}
+#sb-container {
+    position: fixed;
+    margin: 0;
+    padding: 0;
+    top: 0;
+    left: 0;
+    z-index: 99999999999999;
+    text-align: left;
+    visibility: hidden;
+    display: none;
+}
+
+iframe {
+    overflow-clip-margin: content-box !important;
+    overflow: clip !important;
+    border-width: 2px;
+    border-style: inset;
+    border-color: initial;
+    border-image: initial;
+}
+/*fin todos los sectores*/
+/**********************************************************************************************************/
+/**********************************************************************************************************/
+
+/*seccion de filtros----- ubicacion derecha de la pagina*/
+.columna_filtros_pro {
+    float: right;
+    width: 16%;
+    padding-top: 15px;
+    padding-left: 1%;
+}
+
+/*seccion paginador*/
+
+.paginador-row, .paginate, .contenedor_pag {
+    margin-bottom: 1em;
+}
+
+b {
+    font-weight: bold;
+}
+
+.p_actual {
+    color: #fff;
+    border: #00bfa5 1px solid;
+    background-color: #00bfa5;
+    width: 20px;
+    height: 20px;
+}
+
+.p_others, .siguiente, .anterior {
+    color: #00bfa5;
+    border: #00bfa5 1px solid;
+    transition-duration: 0.2s !important;
+    height: 20px;
+    width: 20px;
+    padding: 4px;
+}
+
+</style>
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+<div style="clear:both">&nbsp;</div>
+<div>
+	<div style="color:#24587F; font-size:18px; font-weight:bold; float:left; line-height:20px; clear:both; width:60%;">
+		Licitaciones <? echo $nombre_sector;?>
+	</div>
+	<div style="float:right; width:40%;" id="div_busqueda_nombre">
+		Buscar Por Nombre de Licitaci&oacute;n: <? echo form_input($nombre);?>
+		<input type="button" style="margin-top:0.4rem;" class="btn_buscar_nombre btn_verde" value="Buscar" onClick="javascript:pagina(<?echo $actual;?>, 0)" />
+	</div>
+</div>
+<div style="clear:both;padding-bottom:10px;"><a href="/pages/viewpage.action?pageId=54001750" style="color:#109aa5;">Seleccione sus rubros para recibir en su correo</a></div>
+<div class="columna_listado_pro">
+<? if(isset($licitaciones) && is_array($licitaciones) && sizeof($licitaciones)>0){?>
+<div style="width:100%; clear:both; margin:0 auto; float:left; padding-bottom:5px; color:#254E6D" align="center" class="paginador"><? echo $paginador;?></div>
+<?
+if($selected!=""){
+?> 
+<div style="width:100%; clear:both; float:left; color:#254E6D" align="center"><? echo $selected;?></div>
+<?
+}
+?>
+<table width="100%" align="center" cellspacing="0" cellpadding="0" border="1"  class="confluenceTable panel_principal column_1" style="border-collapse:collapse">
+	<thead>
+		<tr>
+			<td class="titulo" style="display:table-cell;padding:10px;font-size:13px;text-align:center;vertical-align:middle;background-color:#ecf4f7;color:#066293" align="center" width="100%">
+				<a href="javascript:pagina(<?echo $actual;?>, 0, 'ordernombre_<? echo $ordernombre?>')" class="order" style="color:#066293">
+					Nombre<br/>
+					<img src="/sitio_portal/images/<? if($ordernombre=="asc"){ echo "arrowup.png"; }else{ echo "arrowdown.png"; }?>" />
+				</a>
+			</td>
+			<td class="titulo" style="display:table-cell;padding:10px;font-size:13px;text-align:center;vertical-align:middle;background-color:#ecf4f7;color:#066293" align="center" width="100%">
+				<a href="javascript:pagina(<?echo $actual;?>, 0, 'ordersector_<? echo $ordersector?>')" class="order" style="color:#066293">
+					Sector<br/>
+					<img src="/sitio_portal/images/<? if($ordersector=="asc"){ echo "arrowup.png"; }else{ echo "arrowdown.png"; }?>" />
+				</a>
+			</td>
+			<? if ($tipo_lici["var"] != 1 || $tipo_lici["var"] != 2){ ?>
+				<td class="titulo" style="display:table-cell;padding:10px;font-size:13px;text-align:center;vertical-align:middle;background-color:#ecf4f7;color:#066293" align="center" width="100%">
+					<a href="javascript:pagina(<?echo $actual;?>, 0, 'orderestado_<? echo $orderestado?>')" class="order" style="color:#066293">
+						Estado Licitaci&oacute;n<br/>
+						<img src="/sitio_portal/images/<? if($orderestado=="asc"){ echo "arrowup.png"; }else{ echo "arrowdown.png"; }?>" />
+					</a>
+				</td>
+			<? } ?>
+			<td class="titulo" style="display:table-cell;padding:10px;font-size:13px;text-align:center;vertical-align:middle;background-color:#ecf4f7;color:#066293" align="center" width="100%">
+				<a href="javascript:pagina(<?echo $actual;?>, 0, 'orderpais_<? echo $orderpais?>')" class="order" style="color:#066293">
+					Pa&iacute;s<br/>
+					<img src="/sitio_portal/images/<? if($orderpais=="asc"){ echo "arrowup.png"; }else{ echo "arrowdown.png"; }?>" />
+				</a>
+			</td>
+			<td class="titulo" style="display:table-cell;padding:10px;font-size:13px;text-align:center;vertical-align:middle;background-color:#ecf4f7;color:#066293" align="center" width="100%">
+				<a href="javascript:pagina(<?echo $actual;?>, 0, 'orderregion_<? echo $orderregion?>')" class="order" style="color:#066293">
+					Regi&oacute;n<br/>
+					<img src="/sitio_portal/images/<? if($orderregion=="asc"){ echo "arrowup.png"; }else{ echo "arrowdown.png"; }?>" />
+				</a>
+			</td>
+			<? if ($tipo_lici["var"] == 1){ ?>
+				<td class="titulo" style="display:table-cell;padding:10px;font-size:13px;text-align:center;vertical-align:middle;background-color:#ecf4f7;color:#4b7b85" align="center" width="100%">
+					<a href="javascript:pagina(<?echo $actual;?>, 0, 'orderfet_<? echo $orderfet?>')" class="order" style="color:#4b7b85">
+						Fecha Estimada Trimestre<br/>
+						<img src="/sitio_portal/images/<? if($orderfet=="asc"){ echo "arrowup.png"; }else{ echo "arrowdown.png"; }?>" />
+					</a>
+				</td>
+			<? }elseif ($tipo_lici["var"] == 2){ ?>
+				<td class="titulo" style="display:table-cell;padding:10px;font-size:13px;text-align:center;vertical-align:middle;background-color:#ecf4f7;color:#4b7b85" align="center" width="100%">
+					<a href="javascript:pagina(<?echo $actual;?>, 0, 'orderflcb_<? echo $orderflcb?>')" class="order" style="color:#4b7b85">
+						Fecha L&iacute;mite Compra Bases<br/>
+						<img src="/sitio_portal/images/<? if($orderflcb=="asc"){ echo "arrowup.png"; }else{ echo "arrowdown.png"; }?>" />
+					</a>
+				</td>
+			<? } ?>
+			<!--<td nowrap class="titulo">Fecha Actualizaci&oacute;n</td>-->
+		</tr>
+	</thead>
+	<tbody>
+		<? foreach($licitaciones as $lici){
+			if(strstr($lici->url_confluence_lici, "pageId")){
+				$t1="&test=1";
+			}else{
+				$t1="?test=1";
+			}
+		?>
+		<tr class="tr_hover">
+			<td class="confluenceTd" width="100%"><a target="_top" href="." 
+																 onClick="MyWindow=window.open('http://200.6.115.193/ficha/verFicha/<?=$lici->id_lici?>'
+																 			,'MyWindow'
+																 			,'width=870,height=600'); 
+																 			return false;"><?=$lici->Nombre_lici_completo;?></a> <a rel="shadowbox;width=1100;" href="<? echo $lici->url_confluence_lici.$t1;?>" style="font-size:10px;color:#999;display:inline-block">(Ver En Pop-Up)</a></td>
+			<td class="confluenceTd" width="100%"><?=$lici->Nombre_sector;?></td>
+			<? if ($tipo_lici["var"] != 1 || $tipo_lici["var"] != 2){ ?>
+				<td class="confluenceTd" width="100%"><?=$lici->Nombre_lici_tipo;?></td>
+			<? } ?>
+			<td class="confluenceTd" width="100%"><?=$lici->Nombre_pais;?></td>
+			<td class="confluenceTd" width="100%"><?=$lici->Nombre_region;?></td>
+			<? if ($tipo_lici["var"] == 1){ ?>
+				<td class="confluenceTd" width="100%"><? echo $lici->Compra_base_lici_estimada_trim;?>&deg; Trimestre <? echo $lici->Compra_base_lici_estimada_anno;?></td>
+			<? }elseif ($tipo_lici["var"] == 2){ ?>
+				<td class="confluenceTd" width="100%"><? if ($lici->Compra_base_lici_fin != "0000-00-00"){ echo implode('-', array_reverse( explode('-', $lici->Compra_base_lici_fin))); } ?></td>
+			<? } ?>
+			<!--<td class="confluenceTd"><?=(($proy->Fecha_actualizacion_pro != "" && $proy->Fecha_actualizacion_pro!=NULL) ? $proy->Fecha_actualizacion_pro : "");?></td>-->
+		</tr>
+		<?}?>
+	</tbody>
+</table>
+<div style="width:100%; clear:both; margin:0 auto; float:left; padding-bottom:5px; color:#254E6D" align="center" class="paginador"><? echo $paginador;?></div>
+
+<?}else{?>
+
+<table width="100%" align="center" cellspacing="0" cellpadding="0" border="1"  class="confluenceTable" style="border-collapse:collapse">
+	<thead>
+		<tr>
+			<td>
+				No se encontraron resultados para su busqueda.
+			</td>
+		</tr>
+	</thead>
+</table>
+<? }?>
+</div>
+<div class="columna_filtros_pro">
+<div style="clear:both;">
+<div style="clear:both; font-weight:bold; text-decoration:underline;color:#044073;">Filtros</div>
+<div style="clear:both;">&nbsp;</div>
+<div style="width:100%;" class="select-box"><div style="clear:both;">Sector:</div><select style="width:123px;" id="filtro_sector" class="sector input_radius"><option value="">Todos</option>
+<? if(is_array($sector["arr"]) && sizeof($sector["arr"])>0){
+	foreach($sector["arr"] as $key=>$value){
+		if($key!="" && $key!="0"){
+			?>
+			<option value="<? echo $key;?>" <? if($key==$sector["var"]){ ?> selected="selected" <?}?>><? echo $value;?></option>
+			<?
+		}
+	}
+}?>
+</select></div>
+<div style="clear:both;">&nbsp;</div>
+<div style="width:100%;" class="select-box"><div style="clear:both;">Empresa que Licita:</div><select style="width:123px;" id="filtro_mandante" class="mandante input_radius"><option value="">Todos</option>
+<? if(is_array($mandante["arr"]) && sizeof($mandante["arr"])>0){
+	echo $mandante["var"];
+	foreach($mandante["arr"] as $key=>$value){
+		if($key!="" && $key!="0"){
+			?>
+			<option value="<? echo $key;?>" <? if($key==$mandante["var"]){?> selected="selected" <?}?>><? echo $value;?></option>
+			<?
+		}
+	}
+}?>
+</select></div>
+<div style="clear:both;">&nbsp;</div>
+<div style="width:100%;" class="select-box"><div style="clear:both;">Pa&iacute;s:</div><select style="width:123px;" id="filtro_pais" class="pais input_radius"><option value="">Todos</option>
+<? if(is_array($pais["arr"]) && sizeof($pais["arr"])>0){
+	foreach($pais["arr"] as $key=>$value){
+		if($key!="" && $key!="0"){
+			?>
+			<option value="<? echo $key;?>" <? if($key==$pais["var"]){?> selected="selected" <?}?>><? echo $value;?></option>
+			<?
+		}
+	}
+}?>
+</select></div>
+<div style="clear:both;">&nbsp;</div>
+<div style="width:100%;" class="select-box"><div style="clear:both;">Regi&oacute;n:</div><select style="width:123px;" id="filtro_region" class="region input_radius"><option value="">Todos</option>
+<? if(is_array($region["arr"]) && sizeof($region["arr"])>0){
+	foreach($region["arr"] as $key=>$value){
+		if($key!="" && $key!="0"){
+			?>
+			<option value="<? echo $key;?>" <? if($key==$region["var"]){?> selected="selected" <?}?>><? echo $value;?></option>
+			<?
+		}
+	}
+}?>
+</select></div>
+<div style="clear:both;">&nbsp;</div>
+<div style="width:100%;" class="select-box"><div style="clear:both;">Registros Requeridos:</div>
+	<select style="width:123px;" id="filtro_rev_prov" class="reg_prov input_radius"><option value="">Todos</option>
+	<? if(is_array($reg_prov["arr"]) && sizeof($reg_prov["arr"])>0){
+		foreach($reg_prov["arr"] as $key=>$value){
+			if($key!="" && $key!="0"){
+				?>
+				<option value="<? echo $key;?>" <? if($key==$reg_prov["var"]){?> selected="selected" <?}?>><? echo $value;?></option>
+				<?
+			}
+		}
+	}?>
+	</select>
+</div>
+<div style="clear:both;">&nbsp;</div>
+<div style="width:100%;" class="select-box"><div style="clear:both;">Estado Licitaci&oacute;n:</div>
+	<select style="width:123px;" id="filtro_tipo_lici" class="tipo_lici input_radius"><option value="">Todos</option>
+	<? if(is_array($tipo_lici["arr"]) && sizeof($tipo_lici["arr"])>0){
+		foreach($tipo_lici["arr"] as $key=>$value){
+			if($key!="" && $key!="0"){
+				?>
+				<option value="<? echo $key;?>" <? if($key==$tipo_lici["var"]){?> selected="selected" <?}?>><? echo $value;?></option>
+				<?
+			}
+		}
+	}?>
+	</select>
+</div>
+<div style="clear:both;">&nbsp;</div>
+<div style="width:100%;" class=""><input type="button" class="btn_buscar_proy btn_azul" value="Buscar" onClick="javascript:pagina(<?echo $actual;?>, 0)" /></div>
+<div style="weidth:100%; clear:both; margin:0 auto; display:none;" align="center" class="sec"><? echo $id_sector;?></div>
+<div style="weidth:100%; clear:both; margin:0 auto; display:none;" align="center" class="sec2"><? echo base64_encode("listar_lic");?></div>
+<div style="weidth:100%; clear:both; margin:0 auto; display:none;" align="center" class="actual"><? echo $actual;?></div>
+</div>
+<div style="clear:both;">&nbsp;</div>
+<div style="clear:both;">&nbsp;</div>
+<div style="clear:both; background-color:#F0F0F0; padding:10px;border: 1px solid #9cbebd; border-radius:8px; -moz-border-radius:8px; -webkit-border-radius:8px;">
+<div style="clear:both; font-weight:bold; text-decoration:underline;color:#107883;">Buscar Licitaciones Relacionadas con:</div>
+<div style="clear:both;">&nbsp;</div>
+<div style="width:100%;" class="select-box"><div style="clear:both;">Obras Principales:</div><select style="width:110px;" id="filtro_obra" class="obra input_radius"><option value="">Todos</option>
+<? if(is_array($obra["arr"]) && sizeof($obra["arr"])>0){
+	foreach($obra["arr"] as $key=>$value){
+		if($key!="" && $key!="0"){
+			?>
+			<option value="<? echo $key;?>" <? if($key==$obra["var"]){?> selected="selected" <?}?>><? echo $value;?></option>
+			<?
+		}
+	}
+}?>
+</select></div>
+<div style="clear:both;">&nbsp;</div>
+<div style="width:100%;" class="select-box"><div style="clear:both;">Equipos Principales:</div><select style="width:110px;" id="filtro_equipo" class="equipo input_radius"><option value="">Todos</option>
+<? if(is_array($equipo["arr"]) && sizeof($equipo["arr"])>0){
+	foreach($equipo["arr"] as $key=>$value){
+		if($key!="" && $key!="0"){
+			?>
+			<option value="<? echo $key;?>" <? if($key==$equipo["var"]){?> selected="selected" <?}?>><? echo $value;?></option>
+			<?
+		}
+	}
+}?>
+</select></div>
+<div style="clear:both;">&nbsp;</div>
+<div style="width:100%;" class="select-box"><div style="clear:both;">Suministros Principales:</div><select style="width:110px;" id="filtro_suministro" class="suministro input_radius"><option value="">Todos</option>
+<? if(is_array($suministro["arr"]) && sizeof($suministro["arr"])>0){
+	foreach($suministro["arr"] as $key=>$value){
+		if($key!="" && $key!="0"){
+			?>
+			<option value="<? echo $key;?>" <? if($key==$suministro["var"]){?> selected="selected" <?}?>><? echo $value;?></option>
+			<?
+		}
+	}
+}?>
+</select></div>
+<div style="clear:both;">&nbsp;</div>
+<div style="width:100%;" class="select-box"><div style="clear:both;">Servicios Principales:</div><select style="width:110px;" id="filtro_servicio" class="servicio input_radius"><option value="">Todos</option>
+<? if(is_array($servicio["arr"]) && sizeof($servicio["arr"])>0){
+	foreach($servicio["arr"] as $key=>$value){
+		if($key!="" && $key!="0"){
+			?>
+			<option value="<? echo $key;?>" <? if($key==$servicio["var"]){?> selected="selected" <?}?>><? echo $value;?></option>
+			<?
+		}
+	}
+}?>
+</select></div>
+<div style="clear:both;">&nbsp;</div>
+<div style="width:100%;" class="select-box"><div style="clear:both;">Tipo de Proyectos:</div><select style="width:110px;" id="filtro_tipo" class="tipo input_radius"><option value="">Todos</option>
+<? if(is_array($tipo["arr"]) && sizeof($tipo["arr"])>0){
+	foreach($tipo["arr"] as $key=>$value){
+		if($key!="" && $key!="0"){
+			?>
+			<option value="<? echo $key;?>" <? if($key==$tipo["var"]){?> selected="selected" <?}?>><? echo $value;?></option>
+			<?
+		}
+	}
+}?>
+</select></div>
+<div style="clear:both;">&nbsp;</div>
+<div style="width:100%;" class="select-box"><div style="clear:both;">Rubros Principales:</div><select style="width:110px;" id="filtro_rubro" class="rubro input_radius"><option value="">Todos</option>
+<? if(is_array($rubro["arr"]) && sizeof($rubro["arr"])>0){
+	foreach($rubro["arr"] as $key=>$value){
+		if($key!="" && $key!="0"){
+			?>
+			<option value="<? echo $key;?>" <? if($key==$rubro["var"]){?> selected="selected" <?}?>><? echo $value;?></option>
+			<?
+		}
+	}
+}?>
+</select></div>
+<div style="clear:both;">&nbsp;</div>
+<div style="width:100%;" class=""><input type="button" class="btn_buscar_proy btn_verde" value="Buscar" onClick="javascript:pagina(<?echo $actual;?>, 0)" /></div>
+</div>
+</div>
